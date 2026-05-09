@@ -1,0 +1,440 @@
+/* YOUR ORIGINAL CSS (UNCHANGED) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Text:wght@400;600&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:'Crimson Text', serif;
+  color:#4b352a;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.7), transparent 60%),
+    linear-gradient(135deg, #f6f0e7, #e8d9c8, #f3e6d7);
+  min-height:100vh;
+}
+
+/* HERO (UNCHANGED) */
+.hero{ text-align:center; padding:70px 20px 30px; }
+.hero h1{ font-family:'Cinzel', serif; font-size:3rem; margin-top:10px; color:#5c4033; }
+.hero-img{ width:140px; height:140px; object-fit:cover; border-radius:50%; margin-bottom:10px; box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.verse{ font-size:1.1rem; line-height:1.8; color:#7b5e57; }
+.verse span{ font-size:0.95rem; color:#9c7b70; }
+
+/* TILES (UNCHANGED) */
+.choices{ max-width:1000px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px; padding:40px 20px 80px; }
+.card{ background:#fffaf5; text-decoration:none; color:#4b352a; border-radius:18px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:0.3s; text-align:center; }
+.card:hover{ transform:translateY(-8px); background:#f3e7dc; }
+.card img{ width:100%; height:160px; object-fit:cover; }
+.card h2{ font-family:'Cinzel', serif; margin:15px 0 10px; font-size:1.4rem; color:#5c4033; }
+.card p{ padding:0 15px 20px; color:#7b5e57; line-height:1.6; }
+footer{ text-align:center; padding:20px; background:#3b2c25; color:white; font-size:0.9rem; }
+
+/* === ONLY SUBPAGE NAVIGATION (doesn't affect homepage) === */
+.page-header {
+  background: rgba(255,250,245,0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e8d9c8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  color: #5c4033;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-home:hover { color: #3b2c25; transform: translateX(-3px); }
+.nav-icon { margin-right: 8px; font-size: 1.3rem; }
+.nav-back-btn {
+  background: #f3e7dc;
+  color: #5c4033;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid #e8d9c8;
+  transition: 0.3s;
+}
+
+.nav-back-btn:hover {
+  background: #e8d9c8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === PRAYERS PAGE === */
+.prayer-container { max-width:800px; margin:0 auto; padding:50px 20px; }
+.prayer-header { text-align:center; margin-bottom:40px; }
+.prayer-header h1 { font-family:'Cinzel', serif; font-size:2.5rem; color:#5c4033; margin-bottom:10px; }
+.subtitle { font-size:1.1rem; color:#7b5e57; font-style:italic; }
+.prayer-text {
+  background:#fffaf5;
+  border-radius:18px;
+  padding:35px;
+  margin-bottom:30px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  line-height:1.7;
+  font-size:1.1rem;
+}
+.prayer-title {
+  font-family:'Cinzel', serif;
+  font-size:1.7rem;
+  color:#5c4033;
+  text-align:center;
+  margin-bottom:25px;
+  letter-spacing:1px;
+}
+.prayer-line {
+  margin-bottom:12px;
+  padding-left:25px;
+  position:relative;
+}
+.prayer-line::before {
+  content:'✝';
+  position:absolute;
+  left:0;
+  color:#9c7b70;
+}
+.response {
+  font-style:italic;
+  color:#7b5e57;
+  margin-left:45px;
+  font-size:1rem;
+}
+.gloria {
+  margin-top:25px;
+  padding-top:20px;
+  border-top:2px solid #e8d9c8;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .hero h1{font-size:2.2rem;}
+  .prayer-container{padding:30px 15px;}
+  .nav-container{flex-direction:column;gap:12px;padding:15px;}
+}
+
+/* ROSARY PAGE STYLES */
+.rosary-container { max-width:850px; margin:0 auto; padding:50px 20px; }
+.rosary-header { text-align:center; margin-bottom:40px; }
+.rosary-header h1 { font-family:'Cinzel', serif; font-size:2.8rem; color:#5c4033; margin-bottom:10px; }
+.rosary-img { 
+  width:100%; 
+  max-width:400px; 
+  height:250px; 
+  object-fit:cover; 
+  border-radius:18px; 
+  box-shadow:0 10px 30px rgba(0,0,0,0.15); 
+  margin:0 auto 20px; 
+  display:block; 
+}
+.diagram-note { 
+  text-align:center; 
+  color:#7b5e57; 
+  font-style:italic; 
+  font-size:1rem; 
+}
+
+.rosary-section { margin-bottom:40px; }
+.section-title {
+  font-family:'Cinzel', serif;
+  font-size:1.6rem;
+  color:#5c4033;
+  margin-bottom:20px;
+  text-align:center;
+  padding-bottom:10px;
+  border-bottom:2px solid #e8d9c8;
+}
+.mystery-list { text-align:center; }
+.mystery { 
+  background:#f3e7dc; 
+  margin:8px 0; 
+  padding:12px 20px; 
+  border-radius:12px; 
+  display:inline-block; 
+  font-weight:600; 
+  color:#5c4033; 
+}
+.decade-structure { text-align:center; }
+.decade-step { 
+  background:#fffaf5; 
+  margin:10px 0; 
+  padding:15px; 
+  border-left:4px solid #d4b8a0; 
+  font-weight:600; 
+}
+.final-section .section-title { color:#3b2c25; }
+.center { text-align:center !important; font-size:1.2rem; }
+
+@media (max-width:768px) {
+  .rosary-header h1 { font-size:2.2rem; }
+  .decade-step { padding:12px 10px; }
+}
+
+/* SEVEN DEADLY SINS STYLES */
+.sins-container { max-width:1000px; margin:0 auto; padding:50px 20px; }
+.sins-header { text-align:center; margin-bottom:40px; }
+.sins-header h1 { font-family:'Cinzel', serif; font-size:2.8rem; color:#5c4033; margin-bottom:10px; }
+.sins-intro { margin-bottom:50px; }
+.intro-text { 
+  background:#fffaf5; 
+  padding:25px; 
+  border-radius:18px; 
+  box-shadow:0 6px 20px rgba(0,0,0,0.08); 
+  text-align:center; 
+  font-size:1.1rem; 
+  color:#7b5e57; 
+}
+
+.sins-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:25px;
+  margin-bottom:50px;
+}
+
+.sin-card {
+  background:linear-gradient(145deg, #fffaf5, #f8f1e9);
+  border-radius:20px;
+  padding:30px 25px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,0.12);
+  transition:0.3s;
+  position:relative;
+  overflow:hidden;
+  border:2px solid transparent;
+}
+
+.sin-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.sin-card::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg, #d4b8a0, #b89c7e);
+}
+
+.sin-emoji { font-size:3rem; margin-bottom:15px; }
+.sin-name {
+  font-family:'Cinzel', serif;
+  font-size:1.6rem;
+  color:#5c4033;
+  margin-bottom:10px;
+  font-weight:700;
+}
+.sin-desc { 
+  color:#7b5e57; 
+  font-size:1rem; 
+  margin-bottom:15px; 
+  font-style:italic; 
+}
+.virtue { 
+  background:#f3e7dc; 
+  padding:12px; 
+  border-radius:12px; 
+  margin-bottom:15px; 
+  font-size:0.95rem; 
+}
+.virtue-name { color:#3b2c25; font-weight:700; }
+.sin-prayer { 
+  font-style:italic; 
+  color:#9c7b70; 
+  font-size:0.9rem; 
+  padding:12px; 
+  background:rgba(232,217,200,0.5); 
+  border-radius:10px; 
+  border-left:4px solid #d4b8a0; 
+}
+
+.examen-section, .warfare-section { margin-bottom:40px; }
+.section-title {
+  font-family:'Cinzel', serif;
+  font-size:1.7rem;
+  color:#5c4033;
+  text-align:center;
+  margin-bottom:25px;
+  padding-bottom:12px;
+  border-bottom:3px solid #e8d9c8;
+}
+
+.armor-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:20px;
+  text-align:center;
+}
+.armor-item {
+  background:#fffaf5;
+  padding:20px 15px;
+  border-radius:15px;
+  border:2px solid #e8d9c8;
+  font-weight:600;
+  color:#5c4033;
+  transition:0.3s;
+}
+.armor-item:hover {
+  background:#f3e7dc;
+  transform:translateY(-3px);
+  border-color:#d4b8a0;
+}
+
+@media (max-width:768px) {
+  .sins-grid { grid-template-columns:1fr; }
+  .sins-header h1 { font-size:2.2rem; }
+  .armor-grid { grid-template-columns:repeat(2, 1fr); }
+}
+
+/* CHRISTIAN LIFE STYLES */
+.christian-container { max-width:1100px; margin:0 auto; padding:50px 20px; }
+.christian-header { text-align:center; margin-bottom:50px; }
+.christian-header h1 { font-family:'Cinzel', serif; font-size:2.9rem; color:#5c4033; margin-bottom:10px; }
+
+.pillars-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:30px;
+  margin-bottom:60px;
+}
+
+.pillar-card {
+  background:linear-gradient(145deg, #fffaf5, #f9f4ef);
+  border-radius:22px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transition:0.3s;
+  border:2px solid transparent;
+  position:relative;
+  overflow:hidden;
+}
+
+.pillar-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.2);
+  border-color:#d4b8a0;
+}
+
+.pillar-card.special { border-color:#b89c7e; }
+.pillar-card.special:hover { border-color:#9c7b70; }
+
+.pillar-icon {
+  font-size:3.5rem;
+  margin-bottom:20px;
+  display:block;
+}
+.pillar-card h3 {
+  font-family:'Cinzel', serif;
+  font-size:1.5rem;
+  color:#5c4033;
+  margin-bottom:15px;
+  font-weight:700;
+}
+.pillar-card p {
+  color:#7b5e57;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+.verse {
+  background:#f3e7dc;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:0.9rem;
+  color:#5c4033;
+  font-style:italic;
+  border-left:4px solid #d4b8a0;
+}
+
+.rule-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-bottom:50px;
+}
+.rule-item {
+  text-align:center;
+  padding:30px 20px;
+}
+.rule-emoji { font-size:4rem; margin-bottom:15px; }
+.do { background:#f0f8f0; border:2px solid #9fc8a0; }
+.avoid { background:#fdf0f0; border:2px solid #f0a0a0; }
+.rule-item h4 {
+  font-family:'Cinzel', serif;
+  font-size:1.4rem;
+  color:#5c4033;
+  margin-bottom:20px;
+}
+.rule-item ul {
+  list-style:none;
+  padding:0;
+  text-align:left;
+}
+.rule-item li {
+  padding:8px 0;
+  color:#7b5e57;
+  position:relative;
+  padding-left:25px;
+}
+.rule-item li::before {
+  content:'✦';
+  position:absolute;
+  left:0;
+  color:#d4b8a0;
+}
+
+.checklist-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
+  background:#fffaf5;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom:50px;
+}
+.checklist-item {
+  display:flex;
+  align-items:center;
+  font-weight:600;
+  color:#5c4033;
+  padding:12px 0;
+  border-bottom:1px solid #e8d9c8;
+}
+.checklist-item:last-child { border-bottom:none; }
+.check { 
+  font-size:1.3rem; 
+  margin-right:15px; 
+  color:#9c7b70; 
+  min-width:25px; 
+}
+
+.large { font-size:1.3rem !important; }
+.final-call { text-align:center; padding:40px 20px; background:linear-gradient(145deg, #f8f4f0, #fffaf5); border-radius:25px; }
+
+@media (max-width:768px) {
+  .pillars-grid { grid-template-columns:1fr; }
+  .rule-grid { grid-template-columns:1fr; gap:25px; }
+  .checklist-grid { grid-template-columns:1fr; }
+  .christian-header h1 { font-size:2.3rem; }
+}
